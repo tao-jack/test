@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Object.keys 可以用来获取对象的key的集合，进而可以获得对应key的value
+      //     const obj = {
+      //         name: '林涛',
+      //         age: 25,
+      //         gender: '男',
+      //         school: '湖南信息学院'
+      //     }
+      //    const keys = Object.keys(obj);
+      //    keys.length = 2;
+      //    console.log(keys);
+
+      // Array.forEach
+      //   const eachArr = [1, 2, 3, 4, 5, 6];
+
+      //   eachArr.forEach((item, index, arr) => {
+      //     console.log(item, index, arr);
+      //   });
+
+      // Object.values
+      // const obj = {
+      //       name: '林涛',
+      //       age: 25,
+      //       gender: '男',
+      //       school: '湖南信息学院'
+      //
+      //  const keys = Object.values(obj)
+      //  keys.length = 2;
+      //  console.log(keys);
+      // const mapArr = [1, 2, 3, 4, 5];
+
+      // 三个参数：遍历项 索引 数组本身
+      // 配合箭头函数，对每一个元素进行翻倍
+      // const mapArr2 = mapArr.map((num, index, arr) => 2 * num);
+
+      // console.log(mapArr2)[(2, 4, 6, 8, 10)];
+
+      // const filterArr = [1, 2, 3, 4, 5, 6];
+      // // 三个参数：遍历项 索引 数组本身
+      // // 配合箭头函数，返回大于3的集合
+      // const filterArr2 = filterArr.filter((item, index, arr) => {
+      //   return item > 2;
+      // });
+      // console.log(filterArr2);
+
+      // 统计元素出现个数
+      //13、Array.reduce
+      // 第一个参数callback函数：pre为上次return的值，next为数组的本次遍历的项
+      // 第二个参数为初始值，也是第一个pre
+      const nameArr = ["林涛", "sunsline", "林涛", "sb", "wahaha", "sb"];
+      const total = nameArr.reduce((pre, next) => {
+        if (pre[next]) {
+          pre[next]++;
+        } else {
+          pre[next] = 1;
+        }
+        return pre;
+      }, {});
+      console.log(total);  
+    </script>
+  </body>
+</html>
